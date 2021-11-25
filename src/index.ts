@@ -1,7 +1,11 @@
-const BOLD = '\x1b[1m'
-const RED = BOLD + '\x1b[31m'
-const GREY = '\x1b[90m'
-const RESET = '\x1b[0m'
+// colors
+const isTTY = typeof process !== undefined && process.stdout.isTTY
+const BOLD = isTTY ? '\x1b[1m' : ''
+const RED = isTTY ? BOLD + '\x1b[31m' : ''
+const GREY = isTTY ? '\x1b[90m' : ''
+const RESET = isTTY ? '\x1b[0m' : ''
+
+// shapes
 const BAR = ' │ '
 const LF = GREY + '¬' + RESET
 const EOF = GREY + '<EOF>' + RESET
