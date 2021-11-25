@@ -3,7 +3,7 @@
   "author": "stagas",
   "short": "stagas/annotate-code",
   "description": "beautifully annotate source code with a message, given an index, like a parser or compiler",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "MIT",
   "repository": {
     "type": "git",
