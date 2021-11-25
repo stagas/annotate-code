@@ -1,5 +1,5 @@
 // colors
-const isTTY = typeof process !== undefined && process.stdout.isTTY
+const isTTY = typeof process !== 'undefined' && process.stdout.isTTY
 const BOLD = isTTY ? '\x1b[1m' : ''
 const RED = isTTY ? BOLD + '\x1b[31m' : ''
 const GREY = isTTY ? '\x1b[90m' : ''
