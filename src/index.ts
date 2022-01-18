@@ -33,7 +33,7 @@ const arrow = ({
  *
  * @param settings
  * @param settings.message The message to display
- * @param settings.code The code to annotate
+ * @param settings.input The code to annotate
  * @param settings.index The index position
  * @param settings.linesBefore How many lines before to show
  * @param settings.linesAfter How many lines after to show
@@ -43,7 +43,7 @@ const arrow = ({
  */
 export const annotate = ({
   message,
-  code,
+  input,
   index,
   linesBefore = 3,
   linesAfter = 3,
@@ -51,7 +51,7 @@ export const annotate = ({
   showLineNumbers = true,
 }: {
   message: string
-  code: string
+  input: string
   index: number
   linesBefore?: number
   linesAfter?: number
@@ -62,9 +62,9 @@ export const annotate = ({
   col?: number
   message: string
 } => {
-  if (index > code.length) {
+  if (index > input.length) {
     const pos = index.toLocaleString()
-    const size = code.length.toLocaleString()
+    const size = input.length.toLocaleString()
     return {
       message:
         RED +
@@ -74,7 +74,7 @@ export const annotate = ({
   }
   if (index < 0) {
     const pos = index.toLocaleString()
-    const size = code.length.toLocaleString()
+    const size = input.length.toLocaleString()
     return {
       message: RED + `index ${pos} behind buffer of size ${size}` + RESET,
     }
@@ -87,16 +87,16 @@ export const annotate = ({
   // before the index to the start of the line
   let b = index - 1
   for (; b >= 0; b--, col++) {
-    c = code.charAt(b)
+    c = input.charAt(b)
     if (c === '\n') break
     targetLine = c + targetLine
   }
 
   // after the index to the end of the line
   let a = index
-  for (; a <= code.length; a++) {
-    c = code.charAt(a)
-    if (a === code.length) targetLine += EOF
+  for (; a <= input.length; a++) {
+    c = input.charAt(a)
+    if (a === input.length) targetLine += EOF
     else if (c === '\n') {
       targetLine += LF
       break
@@ -105,15 +105,15 @@ export const annotate = ({
 
   let line = 1
   for (let i = 0; i < index; i++) {
-    if (code.charAt(i) === '\n') line++
+    if (input.charAt(i) === '\n') line++
   }
 
   // before lines
   const before = []
   let lb = b
   while (before.length < linesBefore && lb > 0) {
-    lb = code.slice(0, b).lastIndexOf('\n')
-    before.unshift(code.slice(lb + 1, b) + LF)
+    lb = input.slice(0, b).lastIndexOf('\n')
+    before.unshift(input.slice(lb + 1, b) + LF)
     if (lb < 0) break
     b = lb
   }
@@ -121,15 +121,15 @@ export const annotate = ({
   // after lines
   const after = []
   let la = a
-  while (a < code.length && after.length < linesAfter) {
-    la = code.indexOf('\n', a + 1)
+  while (a < input.length && after.length < linesAfter) {
+    la = input.indexOf('\n', a + 1)
     if (la < 0) {
       if (after.length < linesAfter) {
         after.push(EOF)
       }
       break
     }
-    after.push(code.slice(a + 1, la) + LF)
+    after.push(input.slice(a + 1, la) + LF)
     a = la
   }
 

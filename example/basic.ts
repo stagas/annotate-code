@@ -1,6 +1,6 @@
 import { annotate } from '../src'
 
-const code = `01234
+const input = `01234
 6789 and a 2
 line 3
 and 4
@@ -24,7 +24,7 @@ print(
     message,
     index: 48,
     size: 6,
-    code,
+    input,
   }).message
 )
 
@@ -32,15 +32,15 @@ print(
   annotate({
     message,
     index: 0,
-    code,
+    input,
   }).message
 )
 
 print(
   annotate({
     message,
-    index: code.length,
-    code,
+    index: input.length,
+    input,
   }).message
 )
 
@@ -48,7 +48,7 @@ print(
   annotate({
     message,
     index: 0,
-    code,
+    input,
     linesAfter: 5,
   }).message
 )
@@ -57,7 +57,7 @@ print(
   annotate({
     message,
     index: 0,
-    code,
+    input,
     linesAfter: 100,
   }).message
 )
@@ -65,18 +65,18 @@ print(
 print(
   annotate({
     message,
-    index: code.length,
+    index: input.length,
     linesBefore: 5,
-    code,
+    input,
   }).message
 )
 
 print(
   annotate({
     message,
-    index: code.length,
+    index: input.length,
     linesBefore: 100,
-    code,
+    input,
   }).message
 )
 
@@ -85,7 +85,7 @@ print(
     message,
     index: 7,
     linesAfter: 100,
-    code,
+    input,
   }).message
 )
 
@@ -94,7 +94,7 @@ print(
     message,
     index: 5,
     linesBefore: 2,
-    code,
+    input,
   }).message
 )
 
@@ -103,7 +103,7 @@ print(
     message,
     index: 0,
     linesAfter: 1,
-    code,
+    input,
   }).message
 )
 
@@ -112,7 +112,7 @@ print(
     message,
     index: 0,
     linesAfter: 1,
-    code: `12345`,
+    input: `12345`,
   }).message
 )
 
@@ -120,7 +120,7 @@ print(
   annotate({
     message,
     index: 0,
-    code: ``,
+    input: ``,
   }).message
 )
 
@@ -128,7 +128,7 @@ print(
   annotate({
     message,
     index: 1,
-    code: ``,
+    input: ``,
   }).message
 )
 
@@ -136,6 +136,6 @@ print(
   annotate({
     message,
     index: -1,
-    code: `abc`,
+    input: `abc`,
   }).message
 )
