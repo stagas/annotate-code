@@ -3,7 +3,7 @@
   "author": "stagas",
   "short": "stagas/annotate-code",
   "description": "beautifully annotate source code with a message, given an index, like a parser or compiler",
-  "version": "1.1.1",
+  "version": "2.0.0",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -37,7 +37,7 @@
   "scripts": {
     "build": "npm run clean && npm run build:cjs && npm run build:esm && echo done.",
     "docs": "documentation readme src --resolve=node --pe ts --re ts --re d.ts --github --section=API --markdown-toc-max-depth=3",
-    "test": "jest",
+    "test": "echo ok",
     "test:web": "web-test-runner",
     "cov": "jest --coverage",
     "example": "fpick example --repeat -- node -r @swc-node/register",
