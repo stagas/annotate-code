@@ -6,7 +6,7 @@ const remote = 'https://github.com/stagas/typescript-minimal-template/raw/main/'
 const { assign, omit, sort, merge, replace } = pullConfigs(remote, local)
 
 merge('package.json', (prev, next) => {
-  assign(prev.scripts, omit(next.scripts, []))
+  assign(prev.scripts, omit(next.scripts, ['test']))
   sort(assign(prev.devDependencies, next.devDependencies))
 })
 replace('.eslintrc.js')
