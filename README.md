@@ -49,21 +49,21 @@ console.log(
 
 ### annotate
 
-[src/index.ts:44-160](https://github.com/stagas/annotate-code/blob/4390275c76e1c9b679c13fdb38f4e1b138672f64/src/index.ts#L44-L160 "Source code on GitHub")
+[src/index.ts:44-160](https://github.com/stagas/annotate-code/blob/ee054735d243877c201c9ecf19a87e9ab6e089e6/src/index.ts#L44-L160 "Source code on GitHub")
 
 Annotates a source code string given an index and a message.
 
 #### Parameters
 
-*   `settings` **{message: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String), code: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String), index: [number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number), linesBefore: [number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)?, linesAfter: [number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)?, size: [number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)?, showLineNumbers: [boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?}**&#x20;
+*   `settings` **{message: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String), input: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String), index: [number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number), linesBefore: [number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)?, linesAfter: [number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)?, size: [number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)?, showLineNumbers: [boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?}**&#x20;
 
     *   `settings.message`  The message to display
     *   `settings.input`  The code to annotate
     *   `settings.index`  The index position
-    *   `settings.linesBefore`  How many lines before to show&#x20;(optional, default `3`)
-    *   `settings.linesAfter`  How many lines after to show&#x20;(optional, default `3`)
-    *   `settings.size`  The size of the arrows ^^^^&#x20;(optional, default `1`)
-    *   `settings.showLineNumbers`  Whether to show line numbers&#x20;(optional, default `true`)
+    *   `settings.linesBefore`  How many lines before to show (optional, default `3`)
+    *   `settings.linesAfter`  How many lines after to show (optional, default `3`)
+    *   `settings.size`  The size of the arrows ^^^^ (optional, default `1`)
+    *   `settings.showLineNumbers`  Whether to show line numbers (optional, default `true`)
 
 Returns **{line: [number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)?, col: [number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)?, message: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)}**&#x20;
 
