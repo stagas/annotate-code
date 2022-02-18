@@ -31,7 +31,7 @@ console.log(
     message: 'some error message',
     index: 48,
     size: 6,
-    code,
+    input,
   }).message
 )
 ```
@@ -58,7 +58,7 @@ Annotates a source code string given an index and a message.
 *   `settings` **{message: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String), code: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String), index: [number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number), linesBefore: [number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)?, linesAfter: [number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)?, size: [number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)?, showLineNumbers: [boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?}**&#x20;
 
     *   `settings.message`  The message to display
-    *   `settings.code`  The code to annotate
+    *   `settings.input`  The code to annotate
     *   `settings.index`  The index position
     *   `settings.linesBefore`  How many lines before to show&#x20;(optional, default `3`)
     *   `settings.linesAfter`  How many lines after to show&#x20;(optional, default `3`)
