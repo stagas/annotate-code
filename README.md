@@ -49,7 +49,7 @@ console.log(
 
 ### annotate
 
-[src/index.ts:44-160](https://github.com/stagas/annotate-code/blob/ee054735d243877c201c9ecf19a87e9ab6e089e6/src/index.ts#L44-L160 "Source code on GitHub")
+[src/index.ts:44-160](https://github.com/stagas/annotate-code/blob/8529e7aa89cf4b8d3f63e8b3069fb0252b3d55ac/src/index.ts#L44-L160 "Source code on GitHub")
 
 Annotates a source code string given an index and a message.
 

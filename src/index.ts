@@ -66,10 +66,7 @@ export const annotate = ({
     const pos = index.toLocaleString()
     const size = input.length.toLocaleString()
     return {
-      message:
-        RED +
-        `index ${pos} past buffer of size ${size}: ${pos} > ${size}` +
-        RESET,
+      message: RED + `index ${pos} past buffer of size ${size}: ${pos} > ${size}` + RESET,
     }
   }
   if (index < 0) {
@@ -142,9 +139,7 @@ export const annotate = ({
       const ln = i + (line - before.length)
       return (
         (ln === line ? RED : '') +
-        ((ln === line ? '> ' : '') + ln + RESET + ' │ ').padStart(
-          pad + RESET.length
-        ) +
+        ((ln === line ? '> ' : '') + ln + RESET + ' │ ').padStart(pad + RESET.length) +
         s
       )
     })
