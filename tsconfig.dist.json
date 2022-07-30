@@ -1,13 +1,23 @@
 {
   "extends": "./tsconfig.json",
+  "include": [
+    "src"
+  ],
   "exclude": [
+    "dist",
     "example",
+    "node_modules",
     "test",
-    "**/*.spec.ts",
-    "**/*.spec.tsx"
+    "types"
   ],
   "compilerOptions": {
     "jsx": "react-jsx",
-    "jsxImportSource": "base-custom-element"
+    "types": [
+      "./types/globals",
+      "./types/modules",
+      "audioworklet",
+      "node",
+      "webmidi"
+    ]
   }
 }

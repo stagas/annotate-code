@@ -23,10 +23,10 @@ const arrow = ({
   pad?: number
   size?: number
 }) =>
-  BAR.padStart(pad, ' ') +
-  RED +
-  (('^'.repeat(size) + ' ').padStart(col + size, ' ') + message) +
-  RESET
+  BAR.padStart(pad, ' ')
+  + RED
+  + (('^'.repeat(size) + ' ').padStart(col + size, ' ') + message)
+  + RESET
 
 /**
  * Annotates a source code string given an index and a message.
@@ -138,9 +138,9 @@ export const annotate = ({
     lines = lines.map((s, i) => {
       const ln = i + (line - before.length)
       return (
-        (ln === line ? RED : '') +
-        ((ln === line ? '> ' : '') + ln + RESET + ' │ ').padStart(pad + RESET.length) +
-        s
+        (ln === line ? RED : '')
+        + ((ln === line ? '> ' : '') + ln + RESET + ' │ ').padStart(pad + RESET.length)
+        + s
       )
     })
   }
