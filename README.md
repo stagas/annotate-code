@@ -1,5 +1,5 @@
 <h1>
-annotate-code <a href="https://npmjs.org/package/annotate-code"><img src="https://img.shields.io/badge/npm-v2.0.3-F00.svg?colorA=000"/></a> <a href="src"><img src="https://img.shields.io/badge/loc-120-FFF.svg?colorA=000"/></a> <a href="https://cdn.jsdelivr.net/npm/annotate-code@2.0.3/dist/annotate-code.min.js"><img src="https://img.shields.io/badge/brotli-744b-333.svg?colorA=000"/></a> <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-F0B.svg?colorA=000"/></a>
+annotate-code <a href="https://npmjs.org/package/annotate-code"><img src="https://img.shields.io/badge/npm-v2.0.4-F00.svg?colorA=000"/></a> <a href="src"><img src="https://img.shields.io/badge/loc-120-FFF.svg?colorA=000"/></a> <a href="https://cdn.jsdelivr.net/npm/annotate-code@2.0.4/dist/annotate-code.min.js"><img src="https://img.shields.io/badge/brotli-744b-333.svg?colorA=000"/></a> <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-F0B.svg?colorA=000"/></a>
 </h1>
 
 <p></p>
