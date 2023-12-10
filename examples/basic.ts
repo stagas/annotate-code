@@ -1,4 +1,4 @@
-import { annotate } from '../src'
+import { annotate } from '../src/index.ts'
 
 const input = `01234
 6789 and a 2
